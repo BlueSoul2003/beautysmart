@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="BeautySmart - Your personalized skincare journey starts here. Discover your skin type and get evidence-based product recommendations.">
+    <title>BeautySmart - Your Skincare Journey Starts Here</title>
+
+    <!-- Google Fonts - Distinctive Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+    <!-- Medical Disclaimer Banner -->
+    <div class="disclaimer-banner" role="alert">
+        <div class="container">
+            <svg class="disclaimer-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M10 0C4.48 0 0 4.48 0 10s4.48 10 10 10 10-4.48 10-10S15.52 0 10 0zm1 15H9v-2h2v2zm0-4H9V5h2v6z"
+                    fill="currentColor" />
+            </svg>
+            <p><strong>Medical Disclaimer:</strong> This is educational information only, not medical advice. Consult a
+                dermatologist for skin conditions or concerns.</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="mainNav">
+        <div class="container nav-container">
+            <div class="nav-brand">
+                <svg class="logo-icon" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <circle cx="16" cy="16" r="14" stroke="url(#gradient1)" stroke-width="2" />
+                    <circle cx="16" cy="16" r="8" fill="url(#gradient1)" />
+                    <defs>
+                        <linearGradient id="gradient1" x1="0" y1="0" x2="32" y2="32">
+                            <stop offset="0%" stop-color="#6366F1" />
+                            <stop offset="100%" stop-color="#EC4899" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span class="logo-text">BeautySmart</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#quiz" class="nav-link">Skin Quiz</a></li>
+                <li><a href="#routine" class="nav-link">Your Routine</a></li>
+                <li><a href="#products" class="nav-link">Products</a></li>
+                <li><a href="#faq" class="nav-link">FAQ</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Your Journey to
+                    <span class="gradient-text">Beautiful Skin</span>
+                    Starts Here
+                </h1>
+                <p class="hero-subtitle">
+                    Discover your unique skin type and get personalized, science-backed skincare recommendations.
+                    Transform your routine in just 2 minutes.
+                </p>
+                <div class="hero-cta">
+                    <a href="#quiz" class="btn btn-primary btn-large">
+                        <span>Discover Your Skin Type</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                    <a href="#routine" class="btn btn-secondary btn-large">
+                        <span>Learn the Basics</span>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Essential Steps</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">2min</div>
+                        <div class="stat-label">Quick Quiz</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Science-Based</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-card card-1">
+                    <div class="card-icon">✨</div>
+                    <div class="card-text">Personalized</div>
+                </div>
+                <div class="floating-card card-2">
+                    <div class="card-icon">🔬</div>
+                    <div class="card-text">Evidence-Based</div>
+                </div>
+                <div class="floating-card card-3">
+                    <div class="card-icon">💚</div>
+                    <div class="card-text">Beginner-Friendly</div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <p>Scroll to explore</p>
+        </div>
+    </section>
+
+    <!-- Skin Type Quiz Section -->
+    <section class="section quiz-section" id="quiz">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Step 1</span>
+                <h2 class="section-title">Discover Your Skin Type</h2>
+                <p class="section-subtitle">Answer 7 quick questions to get personalized recommendations</p>
+            </div>
+
+            <div class="quiz-container" id="quizContainer">
+                <!-- Progress Bar -->
+                <div class="quiz-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <p class="progress-text">Question <span id="currentQuestion">1</span> of 7</p>
+                </div>
+
+                <!-- Quiz Questions -->
+                <div class="quiz-questions" id="quizQuestions">
+                    <!-- Questions will be injected by JavaScript -->
+                </div>
+
+                <!-- Quiz Result -->
+                <div class="quiz-result hidden" id="quizResult">
+                    <div class="result-card">
+                        <div class="result-icon" id="resultIcon">🌟</div>
+                        <h3 class="result-title" id="resultTitle">Your Skin Type</h3>
+                        <p class="result-type" id="resultType">Normal</p>
+                        <p class="result-description" id="resultDescription"></p>
+                        <div class="result-characteristics" id="resultCharacteristics"></div>
+                        <button class="btn btn-primary" onclick="scrollToRoutine()">
+                            <span>See Your Personalized Routine</span>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M10 5V15M5 10H15" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </button>
+                        <button class="btn btn-text" onclick="restartQuiz()">Retake Quiz</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Routine Section -->
+    <section class="section routine-section" id="routine">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Step 2</span>
+                <h2 class="section-title">Your Personalized Routine</h2>
+                <p class="section-subtitle">Follow these evidence-based steps for healthy, glowing skin</p>
+            </div>
+
+            <!-- Complexity Toggle -->
+            <div class="complexity-toggle">
+                <button class="complexity-btn active" data-level="beginner">
+                    <span class="complexity-label">Beginner</span>
+                    <span class="complexity-steps">3 Steps</span>
+                </button>
+                <button class="complexity-btn" data-level="intermediate">
+                    <span class="complexity-label">Intermediate</span>
+                    <span class="complexity-steps">5-7 Steps</span>
+                </button>
+                <button class="complexity-btn" data-level="advanced">
+                    <span class="complexity-label">Advanced</span>
+                    <span class="complexity-steps">10 Steps</span>
+                </button>
+            </div>
+
+            <!-- Routine Timeline -->
+            <div class="routine-timeline" id="routineTimeline">
+                <!-- Beginner Routine -->
+                <div class="routine-level active" data-level="beginner">
+                    <div class="routine-step" data-step="1">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <div class="step-header">
+                                <h3 class="step-title">Cleanse</h3>
+                                <span class="step-timing">AM & PM</span>
+                            </div>
+                            <p class="step-description">Remove dirt, oil, and impurities without stripping your skin's
+                                natural moisture barrier.</p>
+                            <button class="step-expand" onclick="toggleStepDetails(this)">
+                                <span>Learn More</span>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </button>
+                            <div class="step-details">
+                                <div class="detail-section">
+                                    <h4>How to Apply</h4>
+                                    <p>Massage gently onto damp skin for 60 seconds using circular motions. Rinse with
+                                        lukewarm water and pat dry.</p>
+                                </div>
+                                <div class="detail-section">
+                                    <h4>Why It Works</h4>
+                                    <p>Proper cleansing prevents clogged pores and acne while maintaining your skin's
+                                        protective barrier. Avoid hot water as it can damage the barrier.</p>
+                                </div>
+                                <div class="detail-section">
+                                    <h4>Key Ingredients</h4>
+                                    <div class="ingredient-tags">
+                                        <span class="tag">Amino Acids</span>
+                                        <span class="tag">Glycerin</span>
+                                        <span class="tag">Ceramides</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="routine-step" data-step="2">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <div class="step-header">
+                                <h3 class="step-title">Moisturize</h3>
+                                <span class="step-timing">AM & PM</span>
+                            </div>
+                            <p class="step-description">Hydrate and support your skin's natural protective barrier to
+                                lock in moisture.</p>
+                            <button class="step-expand" onclick="toggleStepDetails(this)">
+                                <span>Learn More</span>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </button>
+                            <div class="step-details">
+                                <div class="detail-section">
+                                    <h4>How to Apply</h4>
+                                    <p>Apply immediately after cleansing while skin is still slightly damp. Use gentle
+                                        upward motions to massage into skin.</p>
+                                </div>
+                                <div class="detail-section">
+                                    <h4>Why It Works</h4>
+                                    <p>Even oily skin needs moisturizer! It helps maintain barrier integrity and
+                                        prevents moisture loss. Skipping it can actually increase oil production.</p>
+                                </div>
+                                <div class="detail-section">
+                                    <h4>Key Ingredients</h4>
+                                    <div class="ingredient-tags">
+                                        <span class="tag">Hyaluronic Acid</span>
+                                        <span class="tag">Ceramides</span>
+                                        <span class="tag">Niacinamide</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="routine-step" data-step="3">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <div class="step-header">
+                                <h3 class="step-title">Protect (Sunscreen)</h3>
+                                <span class="step-timing critical">AM Only</span>
+                            </div>
+                            <p class="step-description"><strong>Most important step!</strong> Prevent UV damage,
+                                premature aging, and skin cancer with daily sun protection.</p>
+                            <button class="step-expand" onclick="toggleStepDetails(this)">
+                                <span>Learn More</span>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </button>
+                            <div class="step-details">
+                                <div class="detail-section">
+                                    <h4>How to Apply</h4>
+                                    <p>Apply SPF 30+ broad-spectrum sunscreen every morning, even on cloudy days.
+                                        Reapply every 2 hours if outdoors.</p>
+                                </div>
+                                <div class="detail-section">
+                                    <h4>Why It Works</h4>
+                                    <p><strong>90% of visible aging comes from sun exposure.</strong> UV rays break down
+                                        collagen, cause pigmentation, and increase skin cancer risk.</p>
+                                </div>
+                                <div class="detail-section">
+                                    <h4>Key Ingredients</h4>
+                                    <div class="ingredient-tags">
+                                        <span class="tag">Zinc Oxide</span>
+                                        <span class="tag">Titanium Dioxide</span>
+                                        <span class="tag">SPF 30+</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Routine Tips -->
+            <div class="routine-tips">
+                <div class="tip-card">
+                    <div class="tip-icon">⏰</div>
+                    <h4>Be Patient</h4>
+                    <p>Results take 4-6 weeks of consistent use. Don't give up!</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🎯</div>
+                    <h4>Consistency Wins</h4>
+                    <p>A simple routine done daily beats complex routines done sporadically.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🧪</div>
+                    <h4>One at a Time</h4>
+                    <p>Introduce new products gradually to identify what works for you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="section products-section" id="products">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Step 3</span>
+                <h2 class="section-title">Product Recommendations</h2>
+                <p class="section-subtitle">Curated products for your skin type with budget-friendly options</p>
+            </div>
+
+            <!-- Product Filters -->
+            <div class="product-filters">
+                <button class="filter-btn active" data-filter="all">All Products</button>
+                <button class="filter-btn" data-filter="cleanser">Cleansers</button>
+                <button class="filter-btn" data-filter="moisturizer">Moisturizers</button>
+                <button class="filter-btn" data-filter="sunscreen">Sunscreens</button>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="product-grid" id="productGrid">
+                <!-- Products will be injected by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Common Mistakes Section -->
+    <section class="section mistakes-section" id="mistakes">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Common Mistakes to Avoid</h2>
+                <p class="section-subtitle">Learn from these beginner pitfalls to protect your skin</p>
+            </div>
+
+            <div class="mistakes-grid">
+                <div class="mistake-card">
+                    <div class="mistake-icon warning">⚠️</div>
+                    <h3>Over-Exfoliating</h3>
+                    <p class="mistake-why">Damages skin barrier, causes irritation, redness, and increased sensitivity.
+                    </p>
+                    <div class="mistake-solution">
+                        <strong>✓ Do This Instead:</strong>
+                        <p>Exfoliate 1-2 times per week maximum. Use gentle chemical exfoliants over harsh scrubs.</p>
+                    </div>
+                </div>
+
+                <div class="mistake-card">
+                    <div class="mistake-icon warning">⚠️</div>
+                    <h3>Skipping Sunscreen</h3>
+                    <p class="mistake-why">Leads to premature aging, dark spots, and increased skin cancer risk.</p>
+                    <div class="mistake-solution">
+                        <strong>✓ Do This Instead:</strong>
+                        <p>Apply SPF 30+ every morning, even indoors. UV rays penetrate windows!</p>
+                    </div>
+                </div>
+
+                <div class="mistake-card">
+                    <div class="mistake-icon warning">⚠️</div>
+                    <h3>Using Too Many Products</h3>
+                    <p class="mistake-why">Overwhelms skin, makes it hard to identify what works, wastes money.</p>
+                    <div class="mistake-solution">
+                        <strong>✓ Do This Instead:</strong>
+                        <p>Start with the 3 essentials. Add one new product at a time after 2-4 weeks.</p>
+                    </div>
+                </div>
+
+                <div class="mistake-card">
+                    <div class="mistake-icon warning">⚠️</div>
+                    <h3>Sleeping in Makeup</h3>
+                    <p class="mistake-why">Clogs pores, prevents skin renewal, accelerates aging.</p>
+                    <div class="mistake-solution">
+                        <strong>✓ Do This Instead:</strong>
+                        <p>Always cleanse before bed, no exceptions. Keep cleansing wipes for emergencies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq-section" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Get answers to common skincare questions</p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>How long until I see results?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Most products require <strong>4-6 weeks of consistent use</strong> to show noticeable
+                            improvements. Significant changes can take 6-12 weeks or even months for certain ingredients
+                            like retinol. Be patient and consistent!</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Do I really need sunscreen every day?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>Yes, absolutely!</strong> UV rays penetrate clouds and windows. Up to 90% of visible
+                            aging is caused by sun exposure. Apply SPF 30+ broad-spectrum sunscreen every morning, even
+                            on cloudy days or when staying indoors.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Can I skip moisturizer if I have oily skin?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>No!</strong> Even oily skin needs moisturizer. Skipping it can actually cause your
+                            skin to produce MORE oil to compensate. Choose a lightweight, oil-free, or gel-based
+                            moisturizer designed for oily skin.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>What's the correct order to apply products?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>Morning:</strong> Cleanser → Serum (optional) → Moisturizer → Sunscreen<br>
+                            <strong>Evening:</strong> Cleanser → Treatment (optional) → Moisturizer<br>
+                            General rule: Apply from thinnest to thickest consistency.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Are expensive products always better?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>Not necessarily!</strong> Many drugstore products contain the same active ingredients
+                            as luxury brands. Focus on ingredients and formulation, not price. Some affordable brands
+                            like CeraVe and The Ordinary are dermatologist-recommended.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <svg class="logo-icon" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <circle cx="16" cy="16" r="14" stroke="url(#gradient2)" stroke-width="2" />
+                            <circle cx="16" cy="16" r="8" fill="url(#gradient2)" />
+                            <defs>
+                                <linearGradient id="gradient2" x1="0" y1="0" x2="32" y2="32">
+                                    <stop offset="0%" stop-color="#6366F1" />
+                                    <stop offset="100%" stop-color="#EC4899" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span>BeautySmart</span>
+                    </div>
+                    <p class="footer-tagline">Evidence-based skincare education for everyone</p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Learn</h4>
+                        <ul>
+                            <li><a href="#quiz">Skin Type Quiz</a></li>
+                            <li><a href="#routine">Skincare Routine</a></li>
+                            <li><a href="#products">Products</a></li>
+                            <li><a href="#faq">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#" onclick="alert('Coming soon!')">Scientific Sources</a></li>
+                            <li><a href="#" onclick="alert('Coming soon!')">Ingredient Glossary</a></li>
+                            <li><a href="#" onclick="alert('Coming soon!')">Video Tutorials</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-disclaimer">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path
+                            d="M8 0C3.58 0 0 3.58 0 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm.8 12H7.2v-1.6h1.6V12zm0-3.2H7.2V4h1.6v4.8z"
+                            fill="currentColor" />
+                    </svg>
+                    <p><strong>Medical Disclaimer:</strong> This is educational information only, not medical advice.
+                        Consult a dermatologist for skin conditions or concerns.</p>
+                </div>
+                <div class="footer-meta">
+                    <p>Built with 💚 using evidence-based research</p>
+                    <p>Last updated: February 2026</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/quiz.js"></script>
+    <script src="assets/js/products.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

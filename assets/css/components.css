@@ -1,0 +1,362 @@
+/* Reusable Components - Skincare Laboratory Aesthetic */
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+/* Buttons - Refined & Distinctive */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-4);
+    font-family: var(--font-body);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-base);
+    line-height: 1;
+    letter-spacing: 0.02em;
+    border-radius: var(--radius-full);
+    transition: all var(--transition-base);
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn-primary {
+    background: var(--gradient-primary);
+    color: var(--white);
+    box-shadow: var(--shadow-md), var(--shadow-glow);
+}
+
+.btn-primary:hover {
+    box-shadow: var(--shadow-lg), var(--shadow-glow);
+}
+
+.btn-secondary {
+    background: var(--cream);
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-secondary:hover {
+    background: var(--primary);
+    color: var(--white);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-text {
+    background: transparent;
+    color: var(--neutral-700);
+    padding: var(--space-1) var(--space-3);
+}
+
+.btn-text:hover {
+    color: var(--primary);
+    background: rgba(45, 95, 93, 0.05);
+}
+
+.btn-large {
+    padding: var(--space-3) var(--space-6);
+    font-size: var(--font-size-lg);
+}
+
+.btn-small {
+    padding: var(--space-1) var(--space-3);
+    font-size: var(--font-size-sm);
+}
+
+/* Cards - Organic & Elegant */
+.card {
+    background: var(--white);
+    border-radius: var(--radius-2xl);
+    padding: var(--space-4);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
+    border: 1px solid rgba(45, 95, 93, 0.08);
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+    border-color: rgba(45, 95, 93, 0.12);
+}
+
+.card-glass {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-backdrop);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+}
+
+/* Tags - Refined */
+.tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.375rem 0.875rem;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    font-family: var(--font-body);
+    background: var(--sage);
+    color: var(--primary);
+    border-radius: var(--radius-full);
+    transition: all var(--transition-fast);
+    letter-spacing: 0.02em;
+}
+
+.tag:hover {
+    background: var(--primary);
+    color: var(--white);
+    transform: scale(1.05);
+}
+
+.tag-primary {
+    background: rgba(45, 95, 93, 0.1);
+    color: var(--primary);
+}
+
+.tag-success {
+    background: rgba(74, 136, 134, 0.1);
+    color: var(--success);
+}
+
+.tag-warning {
+    background: rgba(212, 165, 116, 0.1);
+    color: var(--warning);
+}
+
+/* Section Headers - Elegant Typography */
+.section-header {
+    text-align: center;
+    margin-bottom: var(--space-12);
+}
+
+.section-tag {
+    display: inline-block;
+    padding: var(--space-1) var(--space-3);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    font-family: var(--font-body);
+    background: var(--gradient-warm);
+    color: var(--white);
+    border-radius: var(--radius-full);
+    margin-bottom: var(--space-3);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.section-title {
+    font-family: var(--font-display);
+    font-size: var(--font-size-5xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--neutral-900);
+    line-height: var(--line-height-tight);
+    margin-bottom: var(--space-3);
+    letter-spacing: -0.02em;
+}
+
+.section-subtitle {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-normal);
+    color: var(--neutral-600);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: var(--line-height-relaxed);
+    font-style: italic;
+}
+
+/* Gradient Text - Sophisticated */
+.gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+}
+
+/* Hidden Utility */
+.hidden {
+    display: none !important;
+}
+
+/* Animations - Smooth & Natural */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn var(--transition-slow) ease-out;
+}
+
+/* Pulse Animation - Subtle */
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+}
+
+.pulse {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Floating Animation - Organic */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    33% {
+        transform: translateY(-15px) rotate(1deg);
+    }
+
+    66% {
+        transform: translateY(-8px) rotate(-1deg);
+    }
+}
+
+.float {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Shimmer Effect - Refined */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.shimmer {
+    background: linear-gradient(90deg,
+            var(--cream) 0%,
+            var(--sage) 50%,
+            var(--cream) 100%);
+    background-size: 1000px 100%;
+    animation: shimmer 3s infinite;
+}
+
+/* Decorative Elements */
+.decorative-line {
+    width: 60px;
+    height: 2px;
+    background: var(--gradient-warm);
+    margin: var(--space-3) auto;
+}
+
+.decorative-circle {
+    width: 8px;
+    height: 8px;
+    background: var(--secondary);
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 var(--space-1);
+}
+
+/* Responsive Utilities */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: var(--font-size-4xl);
+    }
+
+    .section-subtitle {
+        font-size: var(--font-size-lg);
+    }
+
+    .btn-large {
+        padding: var(--space-2) var(--space-4);
+        font-size: var(--font-size-base);
+    }
+}
+
+/* Accessibility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Focus Styles - Refined */
+.btn:focus-visible,
+.card:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--cream);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: var(--radius-full);
+    border: 3px solid var(--cream);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-dark);
+}
