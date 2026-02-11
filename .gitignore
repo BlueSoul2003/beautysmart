@@ -1,0 +1,80 @@
+# Environment variables
+.env
+.env.local
+*.env
+
+# Personal data and temporary files
+.tmp/
+.agent/
+cookies.txt
+Greg's notebooks.md
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Personal documentation (contains personal paths/data)
+gemini.md
+findings.md
+progress.md
+task_plan.md
+PROJECT_COMPILED.md
+PHASE1_SUMMARY.md
+CONTRAST_FIX.md
+DASHBOARD_COMPLETE.md
+REORGANIZATION_COMPLETE.md
+DEPLOYMENT_CHECKLIST.md
+
+# Architecture and tools (internal use only)
+architecture/
+tools/
+
+# MCP Configuration (contains auth references)
+mcp_config.json
+list_notebooks.py
+search_skincare.py
+test_mcp.py
+
+# Backup files
+*.bak
+*.backup
+*~
